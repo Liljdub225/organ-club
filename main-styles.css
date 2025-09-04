@@ -1,0 +1,124 @@
+*{
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    box-sizing: border-box;
+}
+/* NAVBAR SECTION */
+.navbar{
+    background: #333;
+    height: 100px;
+    width: 100%;
+    border-bottom: 5px solid #ffb100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 230px;
+    height: auto;
+    display: block;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.navbarlinks{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding-right: 30px;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #ffb100;
+    transition: 0.3s;
+}
+.navbutton{
+    background: #ffb100;
+    border: 0;
+    outline: 0;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.navbutton:hover{
+    background: #fff;
+    color: #ffb100;
+    transition: 0.3s;
+}
+
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;        /* makes sure image covers area */
+    display: block;
+    overflow: hidden;
+  }
+.sunrise{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.header-column{
+    position: absolute;       /* place it on top of the image */
+    top: 50%;                 /* vertically centered */
+    left: 50%;                /* horizontally centered */
+    transform: translate(-50%, -50%); /* centering in the image */
+    text-align: center;
+    color: white;
+}
+h1{
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+/* MAIN CSS */
+.main-photo-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* keeps them centered */
+    gap: 30px; /* space between photos */
+    margin: 50px auto 50px auto;
+    padding: 0 50px;
+}
+.main-photo{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    object-fit: cover;
+    justify-content: center;
+}
+.photo{
+    flex: 1; /* makes them all equal size */
+    aspect-ratio: 1 / 1; /* forces square shape */
+    object-fit: cover;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* SMALL RESPONSIVE */
+@media(max-width: 768px){
+    h1{
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    .header-column{
+        top: 39%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+    /* NAV SECTION RESPONSIVE */
+
+}
