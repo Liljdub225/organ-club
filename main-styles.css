@@ -15,7 +15,7 @@
     width: 100%;
     border-bottom: 5px solid #ffb100;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* divides logo and links */ 
     align-items: center;
 }
 .logo img{
@@ -87,7 +87,7 @@ h1{
 .main-photo-section{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* allows for multiple rows */
     justify-content: center; /* keeps them centered */
     gap: 30px; /* space between photos */
     margin: 50px auto 50px auto;
@@ -99,6 +99,9 @@ h1{
     overflow: hidden;
     object-fit: cover;
     justify-content: center;
+    flex: 1 1 calc(33.333% - 30px); /* 3 per row. flex-grow, flex-shrink, and flex-basis */
+    box-sizing: border-box;
+    text-align: center;
 }
 .photo{
     flex: 1; /* makes them all equal size */
@@ -106,6 +109,15 @@ h1{
     object-fit: cover;
     overflow: hidden;
     max-width: 100%;
+}
+.photo:hover{
+    background-color: #fff;
+    opacity: 50%;
+    cursor: pointer;
+}
+.main-photo:hover{
+    scale: 103%;
+    transition: 0.3s;
 }
 
 /* SMALL RESPONSIVE */
